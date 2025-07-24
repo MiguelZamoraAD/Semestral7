@@ -1,0 +1,775 @@
+        /* Importar fuentes de Google Fonts */
+        
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap');
+        /* --- Variables CSS (Opcional pero recomendado para consistencia) --- */
+        
+         :root {
+            --primary-color: #167ec4;
+            --secondary-color: #6c757d;
+            --tercer-color: #65d0fa;
+            --dark-text: #333;
+            --light-text: #f4f4f4;
+            --background-light: #f8f9fa;
+            --background-dark: #343a40;
+            --border-color: #dee2e6;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+        }
+        /* --- Estilos Generales y Reseteo --- */
+        
+        body {
+            font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--background-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /*Estilo de encabezado*/
+        
+        .h2-company {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        /*Main content*/
+        
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        /*Texto de titulos y sub titulos*/
+        
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-heading);
+            color: var(--dark-text);
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            border: none;
+            /* Asegurarse de que no haya bordes de botón por defecto */
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+        }
+        
+        .btn-small {
+            padding: 8px 15px;
+            font-size: 0.9em;
+        }
+        /* --- Header y Navegación --- */
+        
+        .header {
+            background-color: var(--background-dark);
+            color: var(--light-text);
+            padding: 15px 0;
+            position: sticky;
+            /* Sticky header */
+            top: 0;
+            z-index: 1000;
+            /* Asegura que esté por encima de otros elementos */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            margin: 0;
+            font-size: 1.8em;
+            color: var(--light-text);
+        }
+        
+        .nav-menu ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            /* Flexbox para los elementos de la lista */
+        }
+        
+        .nav-menu ul li {
+            margin-left: 25px;
+        }
+        
+        .nav-menu ul li a {
+            color: var(--light-text);
+            font-weight: 700;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+            /* Un poco de padding para el hover */
+        }
+        
+        .nav-menu ul li a:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .menu-toggle,
+        .user-menu-toggle {
+            display: none;
+            /* Oculto por defecto en escritorio */
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+            line-height: 1;
+            z-index: 1001;
+            /* Ajustar el ícono de hamburguesa */
+        }
+        /* --- Secciones de Contenido General --- */
+        
+        .about-section,
+        .services-section,
+        .portfolio-section,
+        .contact-section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .about-section {
+            background-color: white;
+        }
+        
+        .services-section,
+        .portfolio-section {
+            background-color: var(--background-light);
+        }
+        
+        .contact-section {
+            background-color: white;
+        }
+        /* --- Servicios Grid (CSS Grid) --- */
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            /* Responsivo */
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .service-item {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-item img.modulo-icon {
+            width: 140px;
+            /* más ancho */
+            height: 140px;
+            /* más alto */
+            object-fit: contain;
+            border-radius: 12px;
+            /* bordes redondeados para un toque moderno */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            /* sombra sutil para profundidad */
+            transition: transform 0.3s ease;
+        }
+        
+        .service-item h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        /* --- fromulario (CSS Grid) --- */
+        
+        .formulario-grid {
+            background-color: white;
+            padding: 25px;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+        }
+        
+        .formulario-grid form {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+        
+        .formulario-grid .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .formulario-grid input,
+        .formulario-grid select {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        
+        .formulario-grid button {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .formulario-grid button:hover {
+            background-color: #0056b3;
+        }
+        
+        .formulario-grid .full-width {
+            grid-column: span 5;
+        }
+        /* --- Formulario de Contacto --- */
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 40px auto 0;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--dark-text);
+        }
+        
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-family: var(--font-body);
+            font-size: 1em;
+            box-sizing: border-box;
+            /* Incluye padding y border en el ancho */
+        }
+        
+        .contact-form textarea {
+            resize: vertical;
+            /* Permite redimensionar verticalmente */
+        }
+        /*Tabla*/
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+            font-family: var(--font-body);
+            background-color: rgb(201, 201, 201);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        thead {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        table th,
+        table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+        
+        table tbody tr:nth-child(even) {
+            background-color: #808080;
+        }
+        /*Botones y buscador*/
+        
+        button {
+            padding: 10px 15px;
+            background-color: #2c7be5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #1a5bb8;
+        }
+        
+        .buscador-usuarios {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .buscador-usuarios input {
+            width: 300px;
+            max-width: 90%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        
+        .paginacion-usuarios {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .btnSiguiente,
+        .btnAnterior {
+            padding: 8px 14px;
+            background-color: var(--secondary-color);
+            color: var(--tercer-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        
+        .btn-paginacion.activo,
+        .btn-paginacion:hover {
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0.3em 0.6em;
+            border-radius: 5px;
+            background-color: var(--secondary-color);
+            color: #333;
+            display: inline-block;
+        }
+        /* Formulario emergente*/
+        /* Estilos para el fondo oscuro del modal */
+        
+        #fondoModal {
+            /* Inicialmente oculto por JavaScript */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Fondo semi-transparente oscuro */
+            /* Usar flexbox para centrar el contenido */
+            justify-content: center;
+            /* Centrar horizontalmente */
+            align-items: center;
+            /* Centrar verticalmente */
+            z-index: 1000;
+            /* Asegurar que esté por encima de otros elementos */
+        }
+        /* Estilos para el formulario de categoría */
+        
+        #formularioCategoria,
+        #formularioLibro {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            /* Ancho responsivo */
+            max-width: 500px;
+            /* Ancho máximo para el formulario */
+            box-sizing: border-box;
+            /* Incluir padding y border en el ancho total */
+            transform: translateY(-20px);
+            /* Ligera animación al aparecer */
+            opacity: 0;
+            /* Inicialmente transparente */
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+            /* Transición suave */
+        }
+        /* Clase para ocultar el formulario */
+        
+        .formulario-oculto {
+            display: none;
+            /* Se usará JavaScript para alternar esta clase */
+        }
+        /* Estilos cuando el formulario está visible (por JavaScript, quitando formulario-oculto) */
+        
+        #fondoModal:not(.formulario-oculto) #formularioCategoria,
+        #formularioLibro {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        #formularioCategoria h3,
+        #formularioLibro h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+        
+        #formularioCategoria form input[type="text"],
+        #formularioCategoria form textarea,
+        #formularioCategoria form input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+        
+        #formularioLibro form input[type="text"],
+        #formularioLibro form textarea,
+        #formularioLibro form input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+        
+        #formularioCategoria form textarea,
+        #formularioLibro form textarea {
+            resize: vertical;
+            /* Permitir redimensionar verticalmente */
+            min-height: 100px;
+        }
+        
+        #formularioCategoria form button,
+        #formularioLibro form button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-right: 10px;
+            transition: background-color 0.2s ease;
+        }
+        
+        #formularioCategoria form button[type="submit"]:hover,
+        #formularioLibro form button [type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        #formularioCategoria form button#btnCancelar,
+        #formularioLibro form button#btnCancelar {
+            background-color: #dc3545;
+        }
+        
+        #formularioCategoria form button#btnCancelar:hover,
+        #formularioLibro form button#btnCancelar:hover {
+            background-color: #c82333;
+        }
+        /* Responsive para menú hamburguesa*/
+        
+        .nav-menu ul,
+        .nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .nav-menu ul.active,
+        .nav-list.active {
+            display: block;
+            flex-direction: column;
+        }
+        
+        .menu-toggle,
+        .user-menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .nav-menu ul li,
+        .nav-list li {
+            margin-left: 25px;
+        }
+        
+        .nav-menu ul li a,
+        .nav-list li a {
+            color: var(--light-text);
+            font-weight: 700;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+        }
+        
+        .nav-menu ul li a:hover,
+        .nav-list li a:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        /* El botón de hamburguesa universal */
+        
+        .menu-toggle,
+        .user-menu-toggle {
+            display: none;
+            /* Oculto por defecto en escritorio */
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+            line-height: 1;
+            z-index: 1001;
+            /* Asegura que el botón esté sobre el menú desplegable */
+        }
+        /* Ocultar por clase*/
+        
+        .ocultarlogin {
+            display: none !important;
+        }
+        /* --- Footer --- */
+        
+        .footer {
+            background-color: var(--background-dark);
+            color: var(--light-text);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+        }
+        
+        .footer .social-links a {
+            color: var(--light-text);
+            margin: 0 10px;
+        }
+        
+        .footer .social-links a:hover {
+            color: var(--primary-color);
+        }
+        /* --- Diseño Responsivo (Media Queries) --- */
+        
+        @media (max-width: 1024px) {
+            .formulario-grid form {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .formulario-grid .full-width {
+                grid-column: span 3;
+            }
+        }
+        /* --- Responsive para menú hamburguesa --- */
+        
+        @media (max-width: 768px) {
+            /* Mostrar el botón de hamburguesa */
+            .user-menu-toggle,
+            .menu-toggle {
+                display: block;
+            }
+            /* Ocultar la navegación normal en pantallas pequeñas */
+            .nav-menu ul,
+            .nav-list {
+                /* Usamos .nav-list ya que es la clase del <ul> en tu HTML */
+                display: none;
+                flex-direction: column;
+                /* Para apilar los ítems verticalmente */
+                position: absolute;
+                /* ¡CLAVE! Saca el menú del flujo normal */
+                top: 100%;
+                /* Justo debajo del header (100% de la altura del header) */
+                right: 0;
+                /* Alineado a la derecha */
+                width: 250px;
+                /* Ancho de la ventana del menú */
+                background-color: var(--background-dark);
+                /* Fondo del menú */
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+                /* Sombra para efecto flotante */
+                border-radius: 0 0 8px 8px;
+                /* Bordes redondeados en la parte inferior */
+                padding: 10px 0;
+                /* Padding interno */
+                z-index: 999;
+                /* Por debajo del botón, pero por encima de otros elementos */
+                transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+                /* Animación de entrada/salida */
+                transform: translateY(-10px);
+                /* Un poco hacia arriba para la animación */
+                opacity: 0;
+                /* Inicialmente transparente */
+                pointer-events: none;
+                /* No interactivo cuando está oculto */
+            }
+            /* Estilos cuando el menú está activo (visible) */
+            .nav-menu ul.active,
+            .nav-list.active {
+                display: flex;
+                /* Muestra el menú como flexbox */
+                transform: translateY(0);
+                /* Vuelve a su posición normal */
+                opacity: 1;
+                /* Completamente visible */
+                pointer-events: auto;
+                /* Habilitar interacción */
+            }
+            .nav-menu ul li,
+            .nav-list li {
+                /* Estilo para cada ítem de la lista */
+                margin: 0;
+                /* Quitar márgenes existentes */
+                padding: 12px 20px;
+                /* Más padding para los ítems del menú móvil */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                /* Separador entre ítems */
+            }
+            .nav-menu ul li:last-child,
+            .nav-list li:last-child {
+                border-bottom: none;
+                /* Eliminar el borde del último ítem */
+            }
+            .nav-menu ul li a,
+            .nav-list li a {
+                display: block;
+                /* Para que el enlace ocupe todo el ancho del ítem */
+                color: var(--light-text);
+                /* Color del texto del enlace */
+                text-decoration: none;
+                font-weight: 400;
+                /* Peso de fuente normal para elementos de menú */
+            }
+            .nav-menu ul li a:hover,
+            .nav-list li a:hover {
+                background-color: rgba(0, 0, 0, 0.2);
+                /* Efecto hover para cada ítem */
+                color: var(--tercer-color);
+                /* Cambiar color del texto al pasar el mouse */
+            }
+            .nav-list li button {
+                /* Aplica esto a cualquier botón dentro de .nav-list */
+                width: 100%;
+                text-align: left;
+                padding: 10px 0;
+                background: none;
+                color: var(--primary-color);
+                border: none;
+                border-radius: 0;
+                cursor: pointer;
+                font-size: 1em;
+                transition: background-color 0.2s ease, color 0.2s ease;
+            }
+            .nav-list li button:hover {
+                background-color: rgba(0, 0, 0, 0.2);
+                color: var(--tercer-color);
+            }
+            /* Estilo específico para el botón "Crear nueva categoría" dentro del menú móvil */
+            .nav-list li button#btnMostrarFormulario {
+                width: 100%;
+                text-align: left;
+                /* Alinea el texto a la izquierda */
+                padding: 10px 0;
+                /* Ajusta el padding para que no sea un botón gigante */
+                background: none;
+                /* Elimina el fondo de botón */
+                color: var(--primary-color);
+                /* Color de texto del botón */
+                border: none;
+                border-radius: 0;
+                cursor: pointer;
+                font-size: 1em;
+                transition: background-color 0.2s ease, color 0.2s ease;
+            }
+            .nav-list li button#btnMostrarFormulario:hover {
+                background-color: rgba(0, 0, 0, 0.2);
+                color: var(--tercer-color);
+            }
+            /* Ajustar otros elementos si es necesario */
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            .about-section,
+            .services-section,
+            .portfolio-section,
+            .contact-section {
+                padding: 50px 0;
+            }
+            table {
+                font-size: 0.85em;
+                overflow-x: auto;
+                display: block;
+            }
+            .sidebar {
+                width: 100%;
+                padding: 15px;
+            }
+            .formulario-grid form {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .formulario-grid .full-width {
+                grid-column: span 2;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+            .formulario-grid form {
+                grid-template-columns: 1fr;
+            }
+            .formulario-grid .full-width {
+                grid-column: span 1;
+            }
+        }

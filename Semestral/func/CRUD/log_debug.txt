@@ -1,0 +1,1485 @@
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => libro.png
+            [full_path] => libro.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php57BB.tmp
+            [error] => 0
+            [size] => 89494
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => usuario.png
+            [full_path] => usuario.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\phpF280.tmp
+            [error] => 0
+            [size] => 4920
+        )
+
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => usuario.png
+            [full_path] => usuario.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\phpFF71.tmp
+            [error] => 0
+            [size] => 4920
+        )
+
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => student.png
+            [full_path] => student.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php17AD.tmp
+            [error] => 0
+            [size] => 4062
+        )
+
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => libro.png
+            [full_path] => libro.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php2E82.tmp
+            [error] => 0
+            [size] => 89494
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => reservar.png
+            [full_path] => reservar.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php4C8B.tmp
+            [error] => 0
+            [size] => 7748
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => matematicas.png
+            [full_path] => matematicas.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php8416.tmp
+            [error] => 0
+            [size] => 13611
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => salir.png
+            [full_path] => salir.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php6ED5.tmp
+            [error] => 0
+            [size] => 5079
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => nodes.input.gamepad.rightstick+sdf2.png
+            [full_path] => nodes.input.gamepad.rightstick+sdf2.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\phpE779.tmp
+            [error] => 0
+            [size] => 18231
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => paisaje.png
+            [full_path] => paisaje.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\phpAA11.tmp
+            [error] => 0
+            [size] => 1884480
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => paisajito.png
+            [full_path] => paisajito.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php3B47.tmp
+            [error] => 0
+            [size] => 544450
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => paisajote.png
+            [full_path] => paisajote.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php7109.tmp
+            [error] => 0
+            [size] => 1707714
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => paisa.png
+            [full_path] => paisa.png
+            [type] => 
+            [tmp_name] => 
+            [error] => 1
+            [size] => 0
+        )
+
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => paisa.png
+            [full_path] => paisa.png
+            [type] => 
+            [tmp_name] => 
+            [error] => 1
+            [size] => 0
+        )
+
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => paisa.png
+            [full_path] => paisa.png
+            [type] => 
+            [tmp_name] => 
+            [error] => 1
+            [size] => 0
+        )
+
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => paisa.png
+            [full_path] => paisa.png
+            [type] => 
+            [tmp_name] => 
+            [error] => 1
+            [size] => 0
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => paisa.png
+            [full_path] => paisa.png
+            [type] => 
+            [tmp_name] => 
+            [error] => 1
+            [size] => 0
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => paisa.png
+            [full_path] => paisa.png
+            [type] => 
+            [tmp_name] => 
+            [error] => 1
+            [size] => 0
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => paisa.png
+            [full_path] => paisa.png
+            [type] => 
+            [tmp_name] => 
+            [error] => 1
+            [size] => 0
+        )
+
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => paisaje.png
+            [full_path] => paisaje.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php8B3.tmp
+            [error] => 0
+            [size] => 1884480
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => pasionpaisaje.jpg
+            [full_path] => pasionpaisaje.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\wamp64\tmp\php48E4.tmp
+            [error] => 0
+            [size] => 814019
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => matebook.png
+            [full_path] => matebook.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php535.tmp
+            [error] => 0
+            [size] => 17042
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => matebook.png
+            [full_path] => matebook.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php715D.tmp
+            [error] => 0
+            [size] => 17042
+        )
+
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => pasionpaisaje.jpg
+            [full_path] => pasionpaisaje.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\wamp64\tmp\phpDEBE.tmp
+            [error] => 0
+            [size] => 814019
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => matebook.png
+            [full_path] => matebook.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\phpFF3E.tmp
+            [error] => 0
+            [size] => 17042
+        )
+
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => reservar.png
+            [full_path] => reservar.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php2778.tmp
+            [error] => 0
+            [size] => 7748
+        )
+
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => reservar.png
+            [full_path] => reservar.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php4513.tmp
+            [error] => 0
+            [size] => 7748
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => reservar.png
+            [full_path] => reservar.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\phpEC09.tmp
+            [error] => 0
+            [size] => 7748
+        )
+
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => reservar.png
+            [full_path] => reservar.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php77BE.tmp
+            [error] => 0
+            [size] => 7748
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => reservar.png
+            [full_path] => reservar.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\phpD96.tmp
+            [error] => 0
+            [size] => 7748
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => reservar.png
+            [full_path] => reservar.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\phpC7CE.tmp
+            [error] => 0
+            [size] => 7748
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => reservar.png
+            [full_path] => reservar.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php2625.tmp
+            [error] => 0
+            [size] => 7748
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => reservar.png
+            [full_path] => reservar.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\phpEECE.tmp
+            [error] => 0
+            [size] => 7748
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => matematicas.png
+            [full_path] => matematicas.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php102A.tmp
+            [error] => 0
+            [size] => 13611
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => sistemas.png
+            [full_path] => sistemas.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php950E.tmp
+            [error] => 0
+            [size] => 20537
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => nodes.input.gamepad.leftstick+sdf2.png
+            [full_path] => nodes.input.gamepad.leftstick+sdf2.png
+            [type] => image/png
+            [tmp_name] => C:\wamp64\tmp\php4834.tmp
+            [error] => 0
+            [size] => 17326
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+    [imagen] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)

@@ -1,0 +1,7 @@
+Array
+(
+    [Accion] => Listar
+    [pagina] => 1
+    [limite] => 5
+    [categoria] => Estadística
+)
