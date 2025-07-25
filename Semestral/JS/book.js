@@ -77,10 +77,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.getElementById("btnBuscar").addEventListener("click", () => {
+    paginaActual = 1;
+    cargarlibros(pagina, categoriaSeleccionada); // Que cargue usando el nuevo término
+});
+
 function cargarlibros(paginaActual = 1, categoria = null) {
     const formData = new FormData();
+    const textoBusqueda = document.getElementById("inputBuscar").value.trim();
+    formData.append("busqueda", textoBusqueda);
     formData.append("Accion", "Listar");
     formData.append("pagina", paginaActual);
+    formData.append("categoria", categoria);
     formData.append("limite", librosCount);
 
     if (categoria) {
@@ -113,7 +121,7 @@ function cargarlibros(paginaActual = 1, categoria = null) {
 
                     librosContainer.innerHTML = "";
                     if (!categoria) {
-                        html += `<p>Categoría no especificada.</p>`;
+                        html += `<p>Libro no especificada.</p>`;
                     } else if (libros.length === 0) {
                         console.warn("⚠️ No hay Libros para mostrar en esta página.");
                     } else {
@@ -153,6 +161,7 @@ function cargarlibros(paginaActual = 1, categoria = null) {
             console.error("Error al listar:", error);
             Swal.fire("Error", "Fallo al comunicarse con el servidor.", "error");
         });
+        
 }
 
 
@@ -167,6 +176,11 @@ document.getElementById('btnSiguiente').addEventListener('click', () => {
     if (pagina < totalPaginas) {
         cargarlibros(pagina + 1);
     }
+});
+document.getElementById("btnLimpiar").addEventListener("click", () => {
+    document.getElementById("inputBuscar").value = '';
+    paginaActual = 1;
+    cargarlibros(pagina, categoriaSeleccionada);
 });
 
 document.getElementById("librosContainer").addEventListener("click", function(e) {

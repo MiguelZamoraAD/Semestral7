@@ -19,10 +19,10 @@ require_once '../../class/conexion.php';
                     <ul class="nav-list">
                         <li ><a href="../company_info.php" >Inicio</a></li>
                         <?php if (isset($_SESSION['tipo']) && strtolower($_SESSION['tipo']) === 'adm'): ?>
-                        <li ><a href="../user.php" >Usuario</a></li>
+                        <li ><a href="user.php" >Usuario</a></li>
                         <?php endif; ?> 
-                        <li ><a href="../studen.php" >Estudiante</a></li>
-                        <li ><a href="../CategoryBook.php" >Categorias</a></li>
+                        <li ><a href="estudiante.php" >Estudiante</a></li>
+                        <li ><a href="CategoryBook.php" >Categorias</a></li>
                     </ul>
             </nav>
         </div>

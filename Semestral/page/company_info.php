@@ -40,7 +40,7 @@ include('../resourse/include/header.php')
                     </a>
     
                 </div>
-                <?php if (isset($_SESSION['Tipo']) && strtolower($_SESSION['Tipo']) === 'adm'): ?>
+                
                 <div class="service-item">
                     <a href="page1/reserva.php">
                     <img src="../resourse/img/reservar.png" alt="Icono Sali" class="modulo-icon">
@@ -48,7 +48,7 @@ include('../resourse/include/header.php')
                     </a>
 
                 </div>
-                 <?php endif; ?>
+                 
                 <div class="service-item">
                     <a href="../func/salir.php"><img src="../resourse/img/salir.png" alt="Icono Sali" class="modulo-icon">
                     <h3>Salir</h3>

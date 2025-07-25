@@ -20,6 +20,9 @@ if ($correo) {
     $stmt = $conn->prepare("SELECT * FROM usuarios WHERE Usuario = ?");
     $stmt->execute([$correo]);
     $datosUsuario = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $tipoUsuario = strtolower($datosUsuario['Tipo'] ?? '');
+
     // Consulta los datos del reservas
     $stmt = $conn->prepare("
         SELECT r.id, r.libro_id, l.titulo AS titulo_libro, r.fecha_reserva, r.dias_reservado, r.estado
@@ -31,15 +34,29 @@ if ($correo) {
     $datosreserva = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     // Consulta todas las reservas con información del libro y tipo de usuario
-    $stmt = $conn->prepare("
-        SELECT r.fecha_reserva, l.titulo AS libro, r.dias_reservado, u.tipo AS tipo_usuario
-        FROM reservas r
-        JOIN libros l ON r.libro_id = l.id
-        JOIN usuarios u ON r.usuario = u.Usuario
-        ORDER BY r.fecha_reserva DESC
-    ");
-    $stmt->execute();
-    $reservasGlobales = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            if ($tipoUsuario === 'adm'){
+            // Admin ve todo
+            $stmt = $conn->prepare("
+                SELECT r.fecha_reserva, l.titulo AS libro, r.dias_reservado, u.tipo AS tipo_usuario, r.usuario
+                FROM reservas r
+                JOIN libros l ON r.libro_id = l.id
+                JOIN usuarios u ON r.usuario = u.Usuario
+                ORDER BY r.fecha_reserva DESC
+            ");
+            $stmt->execute();
+        } else {
+            // Solo ve sus propias reservas
+            $stmt = $conn->prepare("
+                SELECT r.fecha_reserva, l.titulo AS libro, r.dias_reservado, u.tipo AS tipo_usuario, r.usuario
+                FROM reservas r
+                JOIN libros l ON r.libro_id = l.id
+                JOIN usuarios u ON r.usuario = u.Usuario
+                WHERE r.usuario = ?
+                ORDER BY r.fecha_reserva DESC
+            ");
+            $stmt->execute([$correo]);
+        }
+        $reservasGlobales = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     // Consulta los datos de vista_estadisticas_libros
     $stmt = $conn->prepare("SELECT * FROM vista_estadisticas_libros");
@@ -79,9 +96,11 @@ if ($correo) {
                             <button class="user-menu-toggle" aria-label="Abrir menú de navegación">&#9776;</button>
                             <ul class="nav-list">
                                 <li ><a href="../company_info.php" >Inicio</a></li>
-                                <li ><a href="../user.php" >Usuario</a></li>
-                                <li ><a href="../studen.php" >Estudiante</a></li>
-                                <li ><a href="../CategoryBook.php" >Categorias</a></li>
+                                <?php if (isset($_SESSION['Tipo']) && strtolower($_SESSION['Tipo']) === 'adm'): ?>
+                                <li ><a href="user.php" >Usuario</a></li>
+                                <?php endif; ?>
+                                <li ><a href="estudiante.php" >Estudiante</a></li>
+                                <li ><a href="CategoryBook.php" >Categorias</a></li>
                             </ul>
                     </nav>
                 </div>
@@ -102,8 +121,10 @@ if ($correo) {
                                             <th>Libro</th>
                                             <th>Días Reservados</th>
                                             <th>Tipo Usuario</th>
+                                            <th>Usuario</th>
                                         </tr>
                                     </thead>
+                                    <div id="registro">
                                     <tbody>
                                         <?php foreach ($reservasGlobales as $res): ?>
                                             <tr>
@@ -121,9 +142,11 @@ if ($correo) {
                                                         };
                                                     ?>
                                                 </td>
+                                                <td><?php echo htmlspecialchars($res['usuario']); ?></td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>
+                                    </div>
                                 </table>
                                 <button onclick="exportarExcel('tabla-global')" class="btn-export">Exportar a Excel</button>
                             <?php else: ?>

@@ -40,9 +40,9 @@ if ($categoria) {
                     <ul class="nav-list">
                         <li ><a href="../../company_info.php" >Inicio</a></li>
                         <?php if (isset($_SESSION['Tipo']) && strtolower($_SESSION['Tipo']) === 'adm'): ?>
-                        <li ><a href="../../user.php" >Usuario</a></li>
+                        <li ><a href="../user.php" >Usuario</a></li>
                         <?php endif; ?> 
-                        <li ><a href="../studen.php" >Estudiante</a></li>
+                        <li ><a href="../estudiante.php" >Estudiante</a></li>
                         <li ><a href="../CategoryBook.php" >Categorias</a></li>
                         <?php if (isset($_SESSION['Tipo']) && strtolower($_SESSION['Tipo']) === 'adm'): ?>
                             <li><button href="Books.php?crear=1"  id="btnMostrarFormulario">➕ Subir un nuevo libro</button></li>
@@ -57,6 +57,11 @@ if ($categoria) {
                            es la que mas espacio usa y la que mas puedo modificar   -->
     <section>
         <div class="container">
+            <div class="buscador-usuarios">
+                <input type="text" id="inputBuscar" placeholder="Buscar libros...">
+                <button id="btnLimpiar">Limpiar</button>
+                <button type="button" id="btnBuscar">Buscar</button>
+            </div>
             <main class="main-content" id="librosContainer">
            
             </main>

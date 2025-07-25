@@ -112,7 +112,7 @@ try {
 
             $totalLibro = $Libro->contarLibros($busqueda,$categoria);
             $libros = $Libro->listarTodos($limite, $offset, $busqueda, $categoria);
-            $total = $Libro->contar(); 
+            $total = $Libro->contar($categoria); 
 
             $response['success'] = true;
             $response['data'] = $libros;

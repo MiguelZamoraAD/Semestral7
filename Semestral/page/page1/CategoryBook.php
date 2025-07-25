@@ -24,7 +24,7 @@ session_start();
                         <?php if (isset($_SESSION['Tipo']) && strtolower($_SESSION['Tipo']) === 'adm'): ?>
                         <li ><a href="user.php" >Usuario</a></li>
                         <?php endif; ?>
-                        <li ><a href="studen.php" >Estudiante</a></li>
+                        <li ><a href="estudiante.php" >Estudiante</a></li>
                         <li ><a href="CategoryBook.php" >Categorias</a></li>
                         <?php if (isset($_SESSION['Tipo']) && strtolower($_SESSION['Tipo']) === 'adm'): ?>
                             <li><button href="CategoryBook.php?crear=1"  id="btnMostrarFormulario">➕ Crear nueva categoría</button></li>

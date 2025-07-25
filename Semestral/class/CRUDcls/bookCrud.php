@@ -119,12 +119,12 @@ class Book{
         $sql = "SELECT COUNT(*) FROM libros WHERE 1=1";
         $params = [];
 
-        if ($busqueda !== '') {
-            $sql .= " AND (categoria LIKE :busqueda OR descripcion LIKE :busqueda)";
+        if (!empty($busqueda)) {
+            $sql .= " AND (titulo LIKE :busqueda OR descripcion LIKE :busqueda)";
             $params[':busqueda'] = "%$busqueda%";
         }
 
-        if ($categoria !== null && $categoria !== '') {
+        if (!empty($categoria)) {
             $sql .= " AND categoria = :categoria";
             $params[':categoria'] = $categoria;
         }
@@ -135,7 +135,7 @@ class Book{
         return (int) $stmt->fetchColumn();
     }
 
-    public function contar() {
+    public function contar($categoria= null) {
         $conn = $this->conexion;
         if (!empty($categoria)) {
             $stmt = $conn->prepare("SELECT COUNT(*) AS total FROM libros WHERE categoria = :categoria");
@@ -155,12 +155,12 @@ class Book{
             $sql = "SELECT * FROM libros WHERE 1=1";
             $params = [];
 
-            if ($busqueda !== '') {
-            $sql .= " AND (categoria LIKE :busqueda OR descripcion LIKE :busqueda)";
+            if (!empty($busqueda)) {
+            $sql .= " AND (titulo LIKE :busqueda OR descripcion LIKE :busqueda)";
             $params[':busqueda'] = "%$busqueda%";
         }
 
-        if ($categoria !== null && $categoria !== '') {
+        if (!empty($categoria)) {
             $sql .= " AND categoria = :categoria";
             $params[':categoria'] = $categoria;
         }
