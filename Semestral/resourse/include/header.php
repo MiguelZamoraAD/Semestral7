@@ -21,7 +21,9 @@
                     <li ><a href="page1/user.php" >Usuario</a></li>
                     <?php endif; ?><li><a href="#about">Estudiante</a></li>
                     <li><a href="page1/categoryBook.php">Categoria</a></li>
+                    <?php if (isset($_SESSION['Tipo']) && strtolower($_SESSION['Tipo']) === 'adm'): ?>
                     <li><a href="#about">Reservas</a></li>
+                     <?php endif; ?>
                     <li><a href="../func/salir.php">cerrar secion</a></li>
                 </ul>
             </nav>

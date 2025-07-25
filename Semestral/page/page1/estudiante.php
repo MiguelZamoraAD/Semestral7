@@ -80,7 +80,6 @@ if ($correo) {
                     <ul>
                         <li><a href="../company_info.php" class="nav-item active"><i class="fas fa-home"></i> Inicio</a></li>
                         <li><a href="CategoryBook.php" class="nav-item"><i class="fas fa-search"></i> Categorias de Libros</a></li>
-                        <li><a href="#" class="nav-item"><i class="fas fa-history"></i> Reservacion</a></li>
                         <li><a href="../../func/salir.php" class="nav-item"><i class="fas fa-sign-out-alt"></i> Salir</a></li>
                         <div class="accordion-item">
                         <button class="accordion-header">
