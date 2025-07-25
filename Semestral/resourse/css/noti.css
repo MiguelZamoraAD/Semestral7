@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+/* --- Variables CSS (Opcional pero recomendado para consistencia) --- */
+
+ :root {
+    --primary-color: #167ec4;
+    --secondary-color: #6c757d;
+    --tercer-color: #65d0fa;
+    --dark-text: #333;
+    --light-text: #f4f4f4;
+    --background-light: #f8f9fa;
+    --background-dark: #343a40;
+    --border-color: #dee2e6;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* General Body and Base Styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #d6d6d6;
+    /* Lighter, more modern background */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    /* Use flexbox for overall layout */
+    flex-direction: column;
+    /* Stack header, main, footer */
+    min-height: 100vh;
+    /* Ensure body takes full viewport height */
+}
+
+
+/* --- Formulario de Contacto --- */
+
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--dark-text);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1em;
+    box-sizing: border-box;
+    /* Incluye padding y border en el ancho */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    /* Permite redimensionar verticalmente */
+}
+
+
+/* Responsive para menú hamburguesa*/
+
+.nav-menu ul,
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu ul li {
+    margin-right: 25px;
+}
+
+.nav-menu ul.active,
+.nav-list.active {
+    display: block;
+    flex-direction: column;
+}
+
+.menu-toggle,
+.user-menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-menu ul li,
+.nav-list li {
+    margin-left: 5px;
+}
+
+.nav-menu ul li a,
+.nav-list li a {
+    color: var(--light-text);
+    font-weight: 700;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+
+.nav-menu ul li a:hover,
+.nav-list li a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+
+/* El botón de hamburguesa universal */
+
+.menu-toggle,
+.user-menu-toggle {
+    display: none;
+    /* Oculto por defecto en escritorio */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 1001;
+    /* Asegura que el botón esté sobre el menú desplegable */
+}
+
+
+/* Header Styles */
+
+.header {
+    background-color: var(--background-dark);
+    color: var(--light-text);
+    padding: 15px 0;
+    position: sticky;
+    /* Sticky header */
+    top: 0;
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    margin: 0 15px;
+    font-size: 28px;
+    /* Slightly larger title */
+    color: #fafafa;
+    /* Darker, more professional color */
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.8em;
+    color: var(--light-text);
+}
+
+.post-meta {
+    font-size: 15px;
+    /* Slightly larger */
+    color: #7f8c8d;
+    /* Muted grey */
+    margin-bottom: 0;
+    /* No bottom margin for header meta */
+}
+
+
+/* Main Content Container */
+
+.main-content {
+    flex-grow: 1;
+    /* Allows main-content to take available space */
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    /* More margin top/bottom */
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows wrapping for smaller screens */
+    gap: 30px;
+    /* Space between main content and sidebar */
+    box-sizing: border-box;
+    /* Include padding in element's total width and height */
+}
+
+
+/* Article/Book Details Section */
+
+.post-details-section {
+    /* Renamed from .main-content to avoid conflict and be more specific */
+    flex: 3;
+    /* Takes 3 parts of the available space */
+    min-width: 550px;
+    /* Adjust min-width to prevent squishing */
+    background-color: #fff;
+    padding: 30px;
+    /* More padding */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* More prominent shadow */
+    box-sizing: border-box;
+}
+
+.post-details-section h2 {
+    color: #3498db;
+    /* A vibrant blue for headings */
+    font-size: 32px;
+    /* Larger heading for the book title */
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1;
+    /* Subtle underline */
+    padding-bottom: 10px;
+}
+
+.post-content {
+    /* This div contains image and text details */
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows image and text to wrap */
+    gap: 25px;
+    /* Space between image and text */
+    margin-bottom: 30px;
+}
+
+.adverbs-image {
+    flex: 0 0 300px;
+    /* Fixed width for the image container, won't grow/shrink much */
+    max-width: 100%;
+    /* Ensures it doesn't overflow */
+    display: flex;
+    /* To center the image if needed */
+    justify-content: center;
+    align-items: flex-start;
+    /* Align image to top */
+}
+
+.adverbs-image img {
+    max-width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    /* Shadow for the image */
+}
+
+.news-items {
+    /* This holds the description, category, quantity */
+    flex: 1;
+    /* Takes remaining space */
+    min-width: 280px;
+    /* Minimum width for the text block */
+}
+
+.news-items p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.news-items strong {
+    color: #333;
+}
+
+
+/* Back Button */
+
+.back-link {
+    display: inline-block;
+    background-color: #6c7a89;
+    /* Muted blue-grey */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    /* Space from the content above */
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #4b5a6a;
+}
+
+
+/* Registration Form (Sidebar) */
+
+.registration-sidebar {
+    flex: 1;
+    /* Takes 1 part of the available space */
+    min-width: 300px;
+    /* Minimum width for the sidebar */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    align-self: flex-start;
+    /* Align to the top of the main-content flex container */
+}
+
+.registration-sidebar h3 {
+    color: #0099ff;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+    text-align: center;
+    /* Center the form title */
+}
+
+.registration-sidebar p {
+    /* For the call to action text */
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 15px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    /* Ensure padding doesn't add to width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+    border-color: #8ddb34;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.checkbox-group {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: #3498db;
+    /* Modern checkbox color */
+}
+
+.submit-button {
+    display: block;
+    /* Make it a block element to take full width */
+    width: 100%;
+    background-color: #2ecc71;
+    /* A friendly green for action */
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.devolver-button {
+    display: block;
+    /* Make it a block element to take full width */
+    width: 100%;
+    background-color: #cc332e;
+    /* A friendly green for action */
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.submit-button:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 992px) {
+    /* Adjust breakpoint for larger tablets/smaller desktops */
+    .main-content {
+        flex-direction: column;
+        /* Stack columns vertically */
+        align-items: center;
+        /* Center items when stacked */
+        width: 95%;
+        /* Slightly wider on smaller screens */
+    }
+    .post-details-section,
+    .registration-sidebar {
+        min-width: unset;
+        /* Remove min-width when stacking */
+        width: 100%;
+        /* Take full width */
+        margin-bottom: 20px;
+        /* Add space between stacked sections */
+    }
+    .registration-sidebar {
+        order: -1;
+        /* Place the registration form above the book details on small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mostrar el botón de hamburguesa */
+    .user-menu-toggle,
+    .menu-toggle {
+        display: block;
+    }
+    /* Ocultar la navegación normal en pantallas pequeñas */
+    .nav-menu ul,
+    .nav-list {
+        /* Usamos .nav-list ya que es la clase del <ul> en tu HTML */
+        display: none;
+        flex-direction: column;
+        /* Para apilar los ítems verticalmente */
+        position: absolute;
+        /* ¡CLAVE! Saca el menú del flujo normal */
+        top: 100%;
+        /* Justo debajo del header (100% de la altura del header) */
+        right: 0;
+        /* Alineado a la derecha */
+        width: 250px;
+        /* Ancho de la ventana del menú */
+        background-color: var(--background-dark);
+        /* Fondo del menú */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        /* Sombra para efecto flotante */
+        border-radius: 0 0 8px 8px;
+        /* Bordes redondeados en la parte inferior */
+        padding: 10px 0;
+        /* Padding interno */
+        z-index: 999;
+        /* Por debajo del botón, pero por encima de otros elementos */
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        /* Animación de entrada/salida */
+        transform: translateY(-10px);
+        /* Un poco hacia arriba para la animación */
+        opacity: 0;
+        /* Inicialmente transparente */
+        pointer-events: none;
+        /* No interactivo cuando está oculto */
+    }
+    /* Estilos cuando el menú está activo (visible) */
+    .nav-menu ul.active,
+    .nav-list.active {
+        display: flex;
+        /* Muestra el menú como flexbox */
+        transform: translateY(0);
+        /* Vuelve a su posición normal */
+        opacity: 1;
+        /* Completamente visible */
+        pointer-events: auto;
+        /* Habilitar interacción */
+    }
+    .nav-menu ul li,
+    .nav-list li {
+        /* Estilo para cada ítem de la lista */
+        margin: 0;
+        /* Quitar márgenes existentes */
+        padding: 12px 20px;
+        /* Más padding para los ítems del menú móvil */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        /* Separador entre ítems */
+    }
+    .nav-menu ul li:last-child,
+    .nav-list li:last-child {
+        border-bottom: none;
+        /* Eliminar el borde del último ítem */
+    }
+    .nav-menu ul li a,
+    .nav-list li a {
+        display: block;
+        /* Para que el enlace ocupe todo el ancho del ítem */
+        color: var(--light-text);
+        /* Color del texto del enlace */
+        text-decoration: none;
+        font-weight: 400;
+        /* Peso de fuente normal para elementos de menú */
+    }
+    .nav-menu ul li a:hover,
+    .nav-list li a:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+        /* Efecto hover para cada ítem */
+        color: var(--tercer-color);
+        /* Cambiar color del texto al pasar el mouse */
+    }
+}
+
+@media (max-width: 600px) {
+    /* Mobile specific adjustments */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+    }
+    header h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .post-meta {
+        font-size: 14px;
+    }
+    .post-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .adverbs-image {
+        flex: 0 0 auto;
+        /* Allow image to take natural width */
+        text-align: center;
+        /* Center the image */
+    }
+    .adverbs-image img {
+        width: 80%;
+        /* Reduce image width on very small screens */
+        max-width: 250px;
+        /* Cap max width */
+    }
+    .post-details-section,
+    .registration-sidebar {
+        padding: 20px;
+        /* Reduce padding on smaller screens */
+    }
+    .post-details-section h2 {
+        font-size: 28px;
+    }
+    .registration-sidebar h3 {
+        font-size: 20px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .submit-button {
+        font-size: 15px;
+        /* Slightly smaller text for inputs and button */
+        padding: 10px;
+    }
+}
