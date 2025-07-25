@@ -52,7 +52,7 @@ if ($libroId) {
     </header>
 
     <main class="main-content">
-        <div class="post-details-section"> <h2 class="section-title">Descripción del Curso</h2> <div class="post-content">
+        <div class="post-details-section"> <h2 class="section-title">Descripción del Libro</h2> <div class="post-content">
                 <div class="adverbs-image">
                     <img src="<?php echo htmlspecialchars($libro['ruta_imagen'] ?? 'default.jpg'); ?>" alt="<?php echo htmlspecialchars($libro['titulo'] ?? 'Libro'); ?>" /><br>
                 </div>

@@ -243,21 +243,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     /* Allows image and text to wrap */
-    gap: 25px;
+    gap: 20px;
     /* Space between image and text */
-    margin-bottom: 30px;
+    align-items: flex-start;
 }
 
 .adverbs-image {
-    flex: 0 0 300px;
+    flex: 1 1 250px;
     /* Fixed width for the image container, won't grow/shrink much */
-    max-width: 100%;
+    max-width: 300px;
     /* Ensures it doesn't overflow */
-    display: flex;
-    /* To center the image if needed */
-    justify-content: center;
-    align-items: flex-start;
-    /* Align image to top */
 }
 
 .adverbs-image img {
@@ -266,17 +261,15 @@ body {
     /* Maintain aspect ratio */
     display: block;
     border: 1px solid #e0e0e0;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     /* Shadow for the image */
 }
 
 .news-items {
     /* This holds the description, category, quantity */
-    flex: 1;
+    flex: 2 1 400px;
     /* Takes remaining space */
-    min-width: 280px;
-    /* Minimum width for the text block */
 }
 
 .news-items p {
@@ -301,7 +294,7 @@ body {
     border-radius: 5px;
     text-decoration: none;
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 5px;
     /* Space from the content above */
     transition: background-color 0.3s ease;
 }
@@ -541,6 +534,18 @@ body {
         /* Efecto hover para cada ítem */
         color: var(--tercer-color);
         /* Cambiar color del texto al pasar el mouse */
+    }
+    .post-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .adverbs-image,
+    .news-items {
+        max-width: 100%;
+        text-align: center;
+    }
+    .news-items {
+        padding: 0 10px;
     }
 }
 
