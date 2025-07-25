@@ -22,7 +22,6 @@ require_once '../../class/conexion.php';
                         <li ><a href="../user.php" >Usuario</a></li>
                         <?php endif; ?> 
                         <li ><a href="../studen.php" >Estudiante</a></li>
-                        <li ><a href="Books.php" >Libros</a></li>
                         <li ><a href="../CategoryBook.php" >Categorias</a></li>
                     </ul>
             </nav>

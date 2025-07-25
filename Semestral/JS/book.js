@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('Accion', 'Crear');
         }
 
-        fetch("../../../func/CRUD/bookFunc.php", {
+        fetch("/Semestral7/Semestral/func/CRUD/bookFunc.php", {
                 method: "POST",
                 body: formData
             })
@@ -87,7 +87,7 @@ function cargarlibros(paginaActual = 1, categoria = null) {
         formData.append("categoria", categoria);
     }
 
-    fetch("../../../func/CRUD/bookFunc.php", {
+    fetch("/Semestral7/Semestral/func/CRUD/bookFunc.php", {
             method: "POST",
             body: formData
         })
@@ -199,7 +199,7 @@ function eliminarLibros(id) {
     formData.append("Accion", "Eliminar");
     formData.append("id", id);
 
-    fetch("/Semestral/func/CRUD/bookFunc.php", {
+    fetch("/Semestral7/Semestral/func/CRUD/bookFunc.php", {
             method: "POST",
             body: formData
         })
@@ -223,7 +223,7 @@ function obtenerLibros(id) {
     formData.append("Accion", "Obtener");
     formData.append("id", id);
 
-    fetch("../../../func/CRUD/bookFunc.php", {
+    fetch("/Semestral7/Semestral/func/CRUD/bookFunc.php", {
         method: "POST",
         body: formData
     })

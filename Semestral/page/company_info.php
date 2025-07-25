@@ -29,17 +29,11 @@ include('../resourse/include/header.php')
                 </div>
                 <?php endif; ?>
                 <div class="service-item">
-                    <a href="page/page1/studen.php">
+                    <a href="page1/estudiante.php">
                         <img src="../resourse/img/student.png" alt="Icono Trans" class="modulo-icon">
                         <h3>Estudiante</h3>
                         <p>Sección de Estudiante</p>
                     </a>
-                </div>
-                <div class="service-item">
-                    <a href="#"><img src="../resourse/img/libro.png" alt="Icono Usua" class="modulo-icon">
-                    <h3>Libros</h3>
-                    <p>Modulo para libros</p></a>
-                    
                 </div>
                 <div class="service-item">
                     <a href="page1/CategoryBook.php">

@@ -13,14 +13,13 @@
 <header class="header">
         <div class="container">
             <h1 class="logo">Biblioteca Virtual</h1>
-            <?php if (isset($_SESSION['Tipo']) && strtolower($_SESSION['Tipo']) === 'adm'): ?>
+            <?php if (isset($_SESSION['correo'])): ?>
             <nav class="nav-menu">
                 <button class="user-menu-toggle" aria-label="Abrir menú de navegación">&#9776; </button>
                 <ul class="nav-list">
                     <?php if (isset($_SESSION['Tipo']) && strtolower($_SESSION['Tipo']) === 'adm'): ?>
                     <li ><a href="page1/user.php" >Usuario</a></li>
                     <?php endif; ?><li><a href="#about">Estudiante</a></li>
-                    <li><a href="#">Libros</a></li>
                     <li><a href="page1/categoryBook.php">Categoria</a></li>
                     <li><a href="#about">Reservas</a></li>
                     <li><a href="../func/salir.php">cerrar secion</a></li>

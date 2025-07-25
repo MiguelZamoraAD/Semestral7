@@ -1,6 +1,6 @@
 <?php
 
-file_put_contents("debugCategory.log", print_r($_POST, true));
+//file_put_contents("debugCategory.log", print_r($_POST, true));
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 ini_set('log_errors', 1);
@@ -11,7 +11,7 @@ $path = realpath(__DIR__ . '/../../class/CRUDcls/categoryCrud.php');
 if ($path === false) {
     die("ERROR: El archivo CategoryCrud.php NO existe en la ruta esperada.");
 }
-file_put_contents("log_debug.txt", print_r($_FILES, true), FILE_APPEND);
+//file_put_contents("log_debug.txt", print_r($_FILES, true), FILE_APPEND);
 
 require_once($path); // clase categoria
 $response = [

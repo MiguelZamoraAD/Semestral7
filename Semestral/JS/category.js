@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('Accion', 'Crear');
         }
 
-        fetch("../../func/CRUD/categoryFunc.php", {
+        fetch("/Semestral7/Semestral/func/CRUD/categoryFunc.php", {
                 method: "POST",
                 body: formData
             })
@@ -81,7 +81,7 @@ function cargarCategorias(paginaActual = 1) {
     formData.append("pagina", paginaActual);
     formData.append("limite", categoriaCount);
 
-    fetch("../../func/CRUD/categoryFunc.php", {
+    fetch("/Semestral7/Semestral/func/CRUD/categoryFunc.php", {
             method: "POST",
             body: formData
         })
@@ -190,7 +190,7 @@ function eliminarCategoria(id) {
     formData.append("Accion", "Eliminar");
     formData.append("id", id);
 
-    fetch("/Semestral/func/CRUD/categoryFunc.php", {
+    fetch("/Semestral7/Semestral/func/CRUD/categoryFunc.php", {
             method: "POST",
             body: formData
         })
@@ -214,7 +214,7 @@ function obtenerCategoria(id) {
     formData.append("Accion", "Obtener");
     formData.append("id", id);
 
-    fetch("../../func/CRUD/categoryFunc.php", {
+    fetch("/Semestral7/Semestral/func/CRUD/categoryFunc.php", {
         method: "POST",
         body: formData
     })

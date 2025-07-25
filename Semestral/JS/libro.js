@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('dias', dias);
 
         try {
-            const res = await fetch('../../../func/CRUD/libroFunc.php', {
+            const res = await fetch('/Semestral7/Semestral/func/CRUD/libroFunc.php', {
                 method: 'POST',
                 body: formData
             });
@@ -71,7 +71,7 @@ document.getElementById('devolverBtn').addEventListener('click', async(e) => {
     formData.append('libro_id', libroId);
 
     try {
-        const res = await fetch('../../../func/CRUD/libroFunc.php', {
+        const res = await fetch('/Semestral7/Semestral/func/CRUD/libroFunc.php', {
             method: 'POST',
             body: formData
         });

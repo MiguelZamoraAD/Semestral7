@@ -1,15 +1,15 @@
 <?php
 
 //file_put_contents("debuguser.log", print_r($_POST, true));
-ini_set('display_errors', 1);
+ini_set('display_errors', 0);
 ini_set('display_startup_errors', 1);
 ini_set('log_errors', 1);
 error_reporting(E_ALL);
 header('Content-Type: application/json');
 
-$path = realpath(__DIR__ . '/../../class/CRUDcls/userCrud.php');
+$path = realpath(__DIR__ . '/../../class/CRUDcls/estudianteCrud.php');
 if ($path === false) {
-    die("ERROR: El archivo userCrud.php NO existe en la ruta esperada.");
+    die("ERROR: El archivo estudianteCrud.php NO existe en la ruta esperada.");
 }
 require_once($path); //editor de usuarios
 
@@ -23,7 +23,7 @@ $response = [
 
 try {
     $accion = $_POST['Accion'] ?? '';
-    $user = new User();
+    $user = new Estudiante();
 
     switch ($accion) {
         case 'Guardar':
@@ -77,37 +77,7 @@ try {
             }
             break;
 
-        case 'Eliminar':
-            $id = $_POST['id'] ?? null;
-
-            if (!$id || !is_numeric($id)) {
-                $response['success'] = false;
-                $response['message'] = 'ID inválido.';
-            } else {
-                $resultado = $user->eliminar($id);
-                $response['success'] = $resultado;
-                $response['message'] = $resultado ? 'Usuario eliminado correctamente.' : 'Error al eliminar el usuario.';
-                $response['accion'] = 'Eliminar';
-            }
-            break;
-
-
-        case 'Listar':
-            $pagina = isset($_POST['pagina']) ? max(1, intval($_POST['pagina'])) : 1;
-            $limite = isset($_POST['limite']) ? intval($_POST['limite']) : 3;
-            $busqueda = isset($_POST['busqueda']) ? trim($_POST['busqueda']) : '';
-
-            $offset = ($pagina - 1) * $limite;
-
-            $totalUsuarios = $user->contarUsuarios($busqueda);
-            $usuarios = $user->listarTodos($limite, $offset, $busqueda);
-
-            $response['success'] = true;
-            $response['data'] = $usuarios;
-            $response['total'] = $totalUsuarios;
-            $response['accion'] = "Listar";
-            break;
-
+       
         default:
             echo json_encode([
                 'exito' => false,

@@ -1,12 +1,12 @@
 <?php
 session_start();
-file_put_contents("debugLibro.log", print_r($_POST, true));
+//file_put_contents("debugLibro.log", print_r($_POST, true));
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 ini_set('log_errors', 1);
 error_reporting(E_ALL);
 header('Content-Type: application/json');
-file_put_contents("sesion_debug.txt", print_r($_SESSION, true), FILE_APPEND);
+//file_put_contents("sesion_debug.txt", print_r($_SESSION, true), FILE_APPEND);
 
 
 $path = realpath(__DIR__ . '/../../class/CRUDcls/libroClass.php');
