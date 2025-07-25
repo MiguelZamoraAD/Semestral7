@@ -24,7 +24,6 @@ include('../resourse/include/header.php')
                     <a href="page1/user.php">
                         <img src="../resourse/img/usuario.png" alt="Icono Trans" class="modulo-icon">
                         <h3>Usuarios</h3>
-                        <p>Sección de Usuarios</p>
                     </a>
                 </div>
                 <?php endif; ?>
@@ -32,27 +31,26 @@ include('../resourse/include/header.php')
                     <a href="page1/estudiante.php">
                         <img src="../resourse/img/student.png" alt="Icono Trans" class="modulo-icon">
                         <h3>Estudiante</h3>
-                        <p>Sección de Estudiante</p>
                     </a>
                 </div>
                 <div class="service-item">
                     <a href="page1/CategoryBook.php">
                     <img src="../resourse/img/categoria.png" alt="Icono Noti" class="modulo-icon">
                     <h3>Categoria de Libros</h3>
-                    <p>Modulo de cartegoria de libros</p></a>
+                    </a>
     
                 </div>
                 <div class="service-item">
                     <a href="page/page1/registrar.php">
                     <img src="../resourse/img/reservar.png" alt="Icono Sali" class="modulo-icon">
                     <h3>Reservacion</h3>
-                    <p>Modulo de reservacion</p></a>
+                    </a>
 
                 </div>
                 <div class="service-item">
                     <a href="../func/salir.php"><img src="../resourse/img/salir.png" alt="Icono Sali" class="modulo-icon">
                     <h3>Salir</h3>
-                    <p>Salir del portal web admin</p></a>
+                    </a>
 
                 </div>
             </div>

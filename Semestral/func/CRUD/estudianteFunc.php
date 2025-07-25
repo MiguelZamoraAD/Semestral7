@@ -63,11 +63,12 @@ try {
             break;
 
 
-        case 'Editar':
+        case 'EditarPassword':
             $id = $_POST['id'] ?? null;
+            $password = $_POST['Password'] ?? '';
 
             if ($id && is_numeric($id)) {
-                $resultado = $user->editar($id, $_POST);
+                $resultado = $user->editar($id, $password);
                 $response['success'] = $resultado;
                 $response['message'] = $resultado ? 'Usuario actualizado correctamente.' : 'Ocurrió un error al actualizar.';
                 $response['accion'] = 'Editar';

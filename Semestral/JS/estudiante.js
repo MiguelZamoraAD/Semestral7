@@ -18,26 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const toggle = document.querySelector(".user-menu-toggle");
-    const navList = document.querySelector(".nav-list");
-
-    toggle.addEventListener("click", function() {
-        navList.classList.toggle("active");
-    });
-});
-
 function registrarUsuario() {
     const cedula = document.getElementById("cedula").value.trim();
     const correo = document.getElementById("correo").value.trim();
-    const editandoId = document.getElementById("btnContraseña").dataset.editando;
+    const userID = document.getElementById("btnContraseña").dataset.id;
 
     const checkForm = new FormData();
     checkForm.append("Accion", "VerificarDuplicado");
     checkForm.append("Cedula", cedula);
     checkForm.append("Usuario", correo);
     if (editandoId) {
-        checkForm.append("id", editandoId); // <- importante
+        checkForm.append("id", userId); // <- importante
     }
 
     fetch("/Semestral7/Semestral/func/CRUD/estudianteFunc.php", {
@@ -49,7 +40,7 @@ function registrarUsuario() {
             if (data.existe) {
                 Swal.fire("Error", "Ya existe un usuario con esta cédula o correo.", "warning");
             } else {
-                enviarFormularioRegistro();
+                actualizarContrasena();
             }
         })
         .catch(err => {
@@ -58,34 +49,25 @@ function registrarUsuario() {
         });
 }
 
-function enviarFormularioRegistro() {
-    const formData = new FormData();
-    const editandoId = document.getElementById("btnContraseña").dataset.editando;
+function actualizarContrasena() {
+    const password = document.getElementById("pass1").value;
+    const confirmPassword = document.getElementById("pass2").value;
+    const userId = document.getElementById("btnRegistrar").dataset.editando;
 
-
-    formData.append("Password", document.getElementById("pass1").value);
-    formData.append("confirmPassword", document.getElementById("pass2").value);
-
-    formData.append("Accion", "Editar");
-    formData.append("id", editandoId);
-
-    const password = formData.get("Password");
-    const confirmPassword = formData.get("confirmPassword");
-
-    if (password || confirmPassword) {
-        if (!validarPasswordSegura(password)) {
-            Swal.fire("Error", "La contraseña debe tener al menos 8 caracteres, incluir letras, números y un símbolo especial.", "warning");
-            return;
-        }
-        if (password !== confirmPassword) {
-            Swal.fire("Error", "Las contraseñas no coinciden.", "error");
-            return;
-        }
-    } else if (editandoId) {
-        // Si es edición y no se ingresó contraseña, eliminar los campos
-        formData.delete("Password");
-        formData.delete("confirmPassword");
+    if (!validarPasswordSegura(password)) {
+        Swal.fire("Error", "La contraseña debe tener al menos 8 caracteres, incluir letras, números y un símbolo especial.", "warning");
+        return;
     }
+
+    if (password !== confirmPassword) {
+        Swal.fire("Error", "Las contraseñas no coinciden.", "error");
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append("Password", password);
+    formData.append("Accion", "EditarPassword");
+    formData.append("id", userId);
 
     fetch("/Semestral7/Semestral/func/CRUD/estudianteFunc.php", {
             method: "POST",
@@ -95,11 +77,10 @@ function enviarFormularioRegistro() {
         .then(data => {
             if (data.success) {
                 Swal.fire("Éxito", data.message, "success");
-                document.getElementById("containerForm").reset();
-                delete document.getElementById("btnContraseña").dataset.editando;
-                document.getElementById("btnCancelarEdicion").style.display = "none";
+                document.getElementById("contraseñaForm").reset();
+                document.getElementById("fondoModal").style.display = "none";
             } else {
-                Swal.fire("Error", data.message || "Ocurrió un error al registrar.", "error");
+                Swal.fire("Error", data.message || "Ocurrió un error al actualizar.", "error");
             }
         })
         .catch(err => {
@@ -108,8 +89,9 @@ function enviarFormularioRegistro() {
         });
 }
 
+
 // Botón editar
-document.getElementById("usuariosBody").addEventListener("click", function(e) {
+document.getElementById("usuariosBody").addEventListener("click", actualizarContrasena); {
     if (e.target.classList.contains("btnEditar")) {
         const id = e.target.dataset.id;
 
@@ -139,7 +121,7 @@ document.getElementById("usuariosBody").addEventListener("click", function(e) {
                 Swal.fire("Error", "No se pudo conectar al servidor.", "error");
             });
     }
-});
+};
 
 
 //validaviones

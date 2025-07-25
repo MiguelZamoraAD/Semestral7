@@ -109,7 +109,7 @@ if ($correo) {
                             <p><strong>Email:</strong> <a href="#"><?php echo htmlspecialchars($correo); ?></a></p>
                             <p><strong>Carrera: </strong><?php echo htmlspecialchars($datosEstudiante['Carrera']); ?></p>
                             <p><strong>Contraseña:
-                            </strong><button id="btnContraseña">cambiar contraseña</button></p>
+                            </strong><button id="btnContraseña" data-id="<?php echo $datosUsuario['id'];?>">cambiar contraseña</button></p>
                         </div>
                     </div>
                     <div class="info-card-right">
