@@ -1,13 +1,24 @@
-<?php
-require_once "../clases/noticias.php";
+<?php 
+session_start();
+//var_dump($_SESSION['Tipo']); 
+require_once '../../../class/conexion.php';
+$db = new Conexion();       // Creamos instancia
+$conn = $db->getConexion();
 
-$id = intval($_GET['id'] ?? 0);
-$noticia = Noticia::buscarPorId($id); // Necesitas este método en la clase
+$categoria = $_GET['categoria'] ?? null;
+$libros = [];
+//var_dump($_GET['categoria']??null);
 
-if (!$noticia) {
-    echo "<h2>Noticia no encontrada</h2>";
-    exit;
+if ($categoria) {
+    try {
+        $stmt = $conn->prepare("SELECT * FROM libros WHERE categoria = ?");
+        $stmt->execute([$categoria]);
+        $libros = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        die("Error al obtener libros: " . $e->getMessage());
+    }
 }
+//var_dump($libros);
 ?>
 
 <!DOCTYPE html>

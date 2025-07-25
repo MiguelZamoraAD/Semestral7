@@ -576,6 +576,14 @@
         }
         /* Ocultar por clase*/
         
+        .sin-stock {
+            background-color: #ffbbbb;
+            /* fondo rojo claro */
+            color: #440000;
+            /* texto rojo fuerte */
+            font-weight: bold;
+        }
+        
         .ocultarlogin {
             display: none !important;
         }

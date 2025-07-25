@@ -118,15 +118,16 @@ function cargarlibros(paginaActual = 1, categoria = null) {
                         console.warn("⚠️ No hay Libros para mostrar en esta página.");
                     } else {
                         libros.forEach(lib => {
+                                    const sinStock = lib.unidades === 0 ? "sin-stock" : "";
                                     html += `
-                            <div class="service-item">
+                            <div class="service-item ${sinStock}">
                                 <a>
                                     <img src="${lib.ruta_imagen}" alt="${lib.titulo}" class="modulo-icon">
                                     <h3>${lib.titulo}</h3>
-                                    <p>${lib.unidades}</p>
                                     <p>${lib.descripcion}</p>
-                                    <span> Ver Mas informacion</span><br>
+                                    <p class="${sinStock}">Cantidad disponible: ${lib.unidades}</p>
                                 </a>
+                                <a href="detalleLibro.php?data-id=${lib.id}">Ver Mas informacion</a><br>
                                 ${tipoUsuario === 'adm' ? `
                                     <button class="btnEditar" data-id="${lib.id}">Editar</button>
                                     <button class="btnEliminar" data-id="${lib.id}">Eliminar</button>

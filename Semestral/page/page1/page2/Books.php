@@ -7,7 +7,7 @@ $conn = $db->getConexion();
 
 $categoria = $_GET['categoria'] ?? null;
 $libros = [];
-var_dump($_GET['categoria']??null);
+//var_dump($_GET['categoria']??null);
 
 if ($categoria) {
     try {
@@ -18,7 +18,7 @@ if ($categoria) {
         die("Error al obtener libros: " . $e->getMessage());
     }
 }
-var_dump($libros);
+//var_dump($libros);
 ?>
 
 <!DOCTYPE html>

@@ -18,12 +18,12 @@
                 <button class="user-menu-toggle" aria-label="Abrir menú de navegación">&#9776; </button>
                 <ul class="nav-list">
                     <?php if (isset($_SESSION['Tipo']) && strtolower($_SESSION['Tipo']) === 'adm'): ?>
-                    <li ><a href="#" >Usuario</a></li>
+                    <li ><a href="page1/user.php" >Usuario</a></li>
                     <?php endif; ?><li><a href="#about">Estudiante</a></li>
-                    <li><a href="#about">Libros</a></li>
-                    <li><a href="#about">Categoria</a></li>
+                    <li><a href="#">Libros</a></li>
+                    <li><a href="page1/categoryBook.php">Categoria</a></li>
                     <li><a href="#about">Reservas</a></li>
-                    <li><a href="salir.php">cerrar secion</a></li>
+                    <li><a href="../func/salir.php">cerrar secion</a></li>
                 </ul>
             </nav>
             <?php endif; ?>

@@ -71,7 +71,7 @@ function registrarUsuario() {
         checkForm.append("id", editandoId); // <- importante
     }
 
-    fetch("/Semestral/func/CRUD/userFunc.php", {
+    fetch("/Semestral7/Semestral/func/CRUD/userFunc.php", {
             method: "POST",
             body: checkForm
         })
@@ -153,7 +153,7 @@ function enviarFormularioRegistro() {
         formData.delete("confirmPassword");
     }
 
-    fetch("/Semestral/func/CRUD/userFunc.php", {
+    fetch("/Semestral7/Semestral/func/CRUD/userFunc.php", {
             method: "POST",
             body: formData
         })
@@ -184,7 +184,7 @@ document.getElementById("usuariosBody").addEventListener("click", function(e) {
         formData.append("Accion", "Obtener");
         formData.append("id", id);
 
-        fetch("/Semestral/func/CRUD/userFunc.php", {
+        fetch("/Semestral7/Semestral/func/CRUD/userFunc.php", {
                 method: "POST",
                 body: formData
             })
@@ -241,7 +241,7 @@ function cargarUsuarios(paginaActual = 1) {
     formData.append("limite", elementosPorPagina);
     formData.append("busqueda", textoBusqueda);
 
-    fetch("/Semestral/func/CRUD/userFunc.php", {
+    fetch("/Semestral7/Semestral/func/CRUD/userFunc.php", {
             method: "POST",
             body: formData
         })
@@ -315,7 +315,7 @@ function eliminarUsuario(id) {
     formData.append("Accion", "Eliminar");
     formData.append("id", id);
 
-    fetch("/Semestral/func/CRUD/userFunc.php", {
+    fetch("/Semestral7/Semestral/func/CRUD/userFunc.php", {
             method: "POST",
             body: formData
         })
