@@ -55,6 +55,7 @@ if ($correo) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido al Sitio de Estudiante</title>
+    <script href="../../JS/estudiante.js"></script>
     <link rel="stylesheet" href="../../resourse/css/estudiante.css">
     <link rel="stylesheet" href="../../resourse/css/princ.css">
     </head>
@@ -108,8 +109,6 @@ if ($correo) {
                             <h4>Información de Contacto:</h4>
                             <p><strong>Email:</strong> <a href="#"><?php echo htmlspecialchars($correo); ?></a></p>
                             <p><strong>Carrera: </strong><?php echo htmlspecialchars($datosEstudiante['Carrera']); ?></p>
-                            <p><strong>Contraseña:
-                            </strong><button id="btnContraseña" data-id="<?php echo $datosUsuario['id'];?>">cambiar contraseña</button></p>
                         </div>
                     </div>
                     <div class="info-card-right">
@@ -166,45 +165,7 @@ if ($correo) {
                 </section>
             </main>
         </div>
-            <section>
-                <div class="containerForm">
-                    <div id="fondoModal" style="display:none">
-                        <div id="formularioCategoria" class="formulario-oculto">
-                            <h3>Cambiar contraseña</h3>
-                            <form id="contraseñaForm" enctype="multipart/form-data">
-                                    <div class="form-group"><input type="password" id="pass1" name="hashMagic" placeholder="Contraseña" required></div>
-                                    <div class="form-group"><input type="password" id="pass2" name="confirmPassword" placeholder="Confirmar contraseña" required></div>
-                                    <div class="form-group full-width">
-                                    <button type="button" id="btnRegistrar">Registrar</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
     </div>
-
-    <script href="../../JS/estudiante.js"></script>
-    <script>
-        document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const item = header.parentElement;
-                const content = item.querySelector('.accordion-content');
-                const icon = header.querySelector('.toggle-icon i');
-
-                item.classList.toggle('active');
-                if (item.classList.contains('active')) {
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                    icon.classList.remove('fa-plus');
-                    icon.classList.add('fa-minus');
-                } else {
-                    content.style.maxHeight = '0';
-                    icon.classList.remove('fa-minus');
-                    icon.classList.add('fa-plus');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
 <?php include("../../resourse/include/footer.php")?>
